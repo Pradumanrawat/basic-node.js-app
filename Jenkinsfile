@@ -6,11 +6,15 @@ pipeline {
     }
 
     stages {
+        
+
+
         stage('Clone') {
-            steps {
-                git 'https://github.com/Pradumanrawat/basic-node.js-app.git'
-            }
-        }
+    steps {
+        git branch: 'main', url: 'https://github.com/Pradumanrawat/basic-node.js-app.git'
+    }
+}
+
 
         stage('Build Docker Image') {
             steps {
